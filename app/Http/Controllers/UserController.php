@@ -21,6 +21,7 @@ class UserController extends Controller
         $user->save();
         return back()->with('user_created', 'Created Successfully!');
     }
+
     public function get()
     {
         $users = User_detail::orderBy('id', 'DESC')->get();

@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('add-user', [UserController::class, 'addUser']);
+Route::get('/add-user', [UserController::class, 'addUser']);
 Route::post('/create', [UserController::class, 'create'])->name('user.create');
 Route::get('/users', [UserController::class, 'get']);
-Route::get('edit-users/{id}', [UserController::class, 'getUserById']);
-Route::get('delete-users/{id}', [UserController::class, 'deleteUserById']);
+Route::get('/edit-users/{id}', [UserController::class, 'getUserById']);
+Route::get('/delete-users/{id}', [UserController::class, 'deleteUserById']);
 Route::post('/update', [UserController::class, 'update'])->name('user.update');
